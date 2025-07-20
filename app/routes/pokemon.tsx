@@ -54,8 +54,8 @@ const PokemonPage = ({ loaderData: { pokemon } }: Route.ComponentProps) => {
             </Button>
           </div>
           <Kicker>{formatNationalPokedexNumber(pokemon.id)}</Kicker>
-          <Heading as="h1" className="capitalize" level={1}>
-            {pokemon.name}
+          <Heading as="h1" level={1}>
+            {kebabCaseToSentenceCase(pokemon.name, { capitalize: true })}
           </Heading>
           <Badges className="mt-3">
             {pokemon.types.map((type) => (

@@ -11,6 +11,7 @@ import { Heading, Kicker } from "@/components/typography";
 
 import { cva } from "@/utilities/classname";
 import { formatNationalPokedexNumber } from "@/utilities/pokemon";
+import { kebabCaseToSentenceCase } from "@/utilities/string";
 
 export interface PokemonCardProps
   extends Omit<LinkProps, "to">,
@@ -50,7 +51,9 @@ export const PokemonCard = ({
       </div>
       <div className="col-span-3">
         <Kicker>{formatNationalPokedexNumber(pokemon.id)}</Kicker>
-        <Heading className="mt-1 truncate capitalize">{pokemon.name}</Heading>
+        <Heading className="mt-1 truncate">
+          {kebabCaseToSentenceCase(pokemon.name, { capitalize: true })}
+        </Heading>
         <Badges className="mt-3">
           {pokemon.types.map((type) => (
             <Badge asChild className="capitalize" key={type.id}>
