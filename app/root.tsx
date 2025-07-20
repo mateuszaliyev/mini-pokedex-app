@@ -89,7 +89,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => (
       <Meta />
       <Links />
     </head>
-    <body className="bg-white tracking-tight text-gray-500 antialiased transition [text-rendering:optimizeLegibility] has-[main[data-background=gray]]:bg-gray-100">
+    <body className="bg-white tracking-tight text-gray-500 antialiased transition duration-500 [text-rendering:optimizeLegibility] has-[main[data-background=gray]]:bg-gray-100">
       {children}
       <ScrollRestoration />
       <Scripts />
