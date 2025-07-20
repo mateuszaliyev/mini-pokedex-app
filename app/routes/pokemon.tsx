@@ -49,7 +49,7 @@ const PokemonPage = ({ loaderData: { pokemon } }: Route.ComponentProps) => {
             <Button asChild size="icon" variant="secondary">
               <LinkBack>
                 <ArrowIcon className="-rotate-90" />
-                <span className="sr-only"></span>
+                <span className="sr-only">Back</span>
               </LinkBack>
             </Button>
           </div>
